@@ -1,0 +1,664 @@
+Using built-in specs.
+COLLECT_GCC=g++
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 5.4.0-6ubuntu1~16.04.10' --with-bugurl=file:///usr/share/doc/gcc-5/README.Bugs --enable-languages=c,ada,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-5 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-5-amd64/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-5-amd64 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-5-amd64 --with-arch-directory=amd64 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
+Thread model: posix
+gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.10) 
+COLLECT_GCC_OPTIONS='-v' '-fpermissive' '-std=c++11' '-g' '-o' 'lmdb_benchmark.exe' '-I' '.' '-L/usr/lib/x86_64-linux-gnu' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/5/cc1plus -quiet -v -I . -imultiarch x86_64-linux-gnu -D_GNU_SOURCE midl.c -quiet -dumpbase midl.c -mtune=generic -march=x86-64 -auxbase midl -g -std=c++11 -version -fpermissive -fstack-protector-strong -Wformat -Wformat-security -o /tmp/ccOFHf5Q.s
+GNU C++11 (Ubuntu 5.4.0-6ubuntu1~16.04.10) version 5.4.0 20160609 (x86_64-linux-gnu)
+	compiled by GNU C version 5.4.0 20160609, GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring duplicate directory "/usr/include/x86_64-linux-gnu/c++/5"
+ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"
+ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/5/../../../../x86_64-linux-gnu/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ .
+ /usr/include/c++/5
+ /usr/include/x86_64-linux-gnu/c++/5
+ /usr/include/c++/5/backward
+ /usr/lib/gcc/x86_64-linux-gnu/5/include
+ /usr/local/include
+ /usr/lib/gcc/x86_64-linux-gnu/5/include-fixed
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+GNU C++11 (Ubuntu 5.4.0-6ubuntu1~16.04.10) version 5.4.0 20160609 (x86_64-linux-gnu)
+	compiled by GNU C version 5.4.0 20160609, GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: 61363a0467975df68838dbafa37c997a
+midl.c: In function ‘MDB_ID* mdb_midl_alloc(int)’:
+midl.c:104:22: warning: invalid conversion from ‘void*’ to ‘MDB_IDL {aka long unsigned int*}’ [-fpermissive]
+  MDB_IDL ids = malloc((num+2) * sizeof(MDB_ID));
+                      ^
+midl.c: In function ‘int mdb_midl_shrink(MDB_ID**)’:
+midl.c:122:17: warning: invalid conversion from ‘void*’ to ‘MDB_IDL {aka long unsigned int*}’ [-fpermissive]
+   (ids = realloc(ids, (MDB_IDL_UM_MAX+1) * sizeof(MDB_ID))))
+                 ^
+midl.c: In function ‘int mdb_midl_grow(MDB_ID**, int)’:
+midl.c:135:15: warning: invalid conversion from ‘void*’ to ‘MDB_IDL {aka long unsigned int*}’ [-fpermissive]
+  idn = realloc(idn, (*idn + num + 2) * sizeof(MDB_ID));
+               ^
+midl.c: In function ‘int mdb_midl_need(MDB_ID**, unsigned int)’:
+midl.c:149:22: warning: invalid conversion from ‘void*’ to ‘MDB_IDL {aka long unsigned int*}’ [-fpermissive]
+   if (!(ids = realloc(ids-1, num * sizeof(MDB_ID))))
+                      ^
+COLLECT_GCC_OPTIONS='-v' '-fpermissive' '-std=c++11' '-g' '-o' 'lmdb_benchmark.exe' '-I' '.' '-L/usr/lib/x86_64-linux-gnu' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ as -v -I . --64 -o /tmp/ccrVn9MR.o /tmp/ccOFHf5Q.s
+GNU assembler version 2.26.1 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.26.1
+COLLECT_GCC_OPTIONS='-v' '-fpermissive' '-std=c++11' '-g' '-o' 'lmdb_benchmark.exe' '-I' '.' '-L/usr/lib/x86_64-linux-gnu' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/5/cc1plus -quiet -v -I . -imultiarch x86_64-linux-gnu -D_GNU_SOURCE mdb.c -quiet -dumpbase mdb.c -mtune=generic -march=x86-64 -auxbase mdb -g -std=c++11 -version -fpermissive -fstack-protector-strong -Wformat -Wformat-security -o /tmp/ccOFHf5Q.s
+GNU C++11 (Ubuntu 5.4.0-6ubuntu1~16.04.10) version 5.4.0 20160609 (x86_64-linux-gnu)
+	compiled by GNU C version 5.4.0 20160609, GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring duplicate directory "/usr/include/x86_64-linux-gnu/c++/5"
+ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"
+ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/5/../../../../x86_64-linux-gnu/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ .
+ /usr/include/c++/5
+ /usr/include/x86_64-linux-gnu/c++/5
+ /usr/include/c++/5/backward
+ /usr/lib/gcc/x86_64-linux-gnu/5/include
+ /usr/local/include
+ /usr/lib/gcc/x86_64-linux-gnu/5/include-fixed
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+GNU C++11 (Ubuntu 5.4.0-6ubuntu1~16.04.10) version 5.4.0 20160609 (x86_64-linux-gnu)
+	compiled by GNU C version 5.4.0 20160609, GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: 61363a0467975df68838dbafa37c997a
+mdb.c:1703:12: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+   DPRINTF(("loosen db %d page %"Z"u", DDBI(mc),
+            ^
+mdb.c:1999:12: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+   DPRINTF(("db %d use loose page %"Z"u", DDBI(mc),
+            ^
+mdb.c:2253:12: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+   DPRINTF(("touched db %d page %"Z"u -> %"Z"u", DDBI(mc),
+            ^
+mdb.c:2253:35: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+   DPRINTF(("touched db %d page %"Z"u -> %"Z"u", DDBI(mc),
+                                   ^
+mdb.c:2641:12: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+   DPRINTF(("renew txn %"Z"u%c %p on mdbenv %p, root page %"Z"u",
+            ^
+mdb.c:2641:26: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+   DPRINTF(("renew txn %"Z"u%c %p on mdbenv %p, root page %"Z"u",
+                          ^
+mdb.c:2752:12: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+   DPRINTF(("begin txn %"Z"u%c %p on mdbenv %p, root page %"Z"u",
+            ^
+mdb.c:2752:26: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+   DPRINTF(("begin txn %"Z"u%c %p on mdbenv %p, root page %"Z"u",
+                          ^
+mdb.c:2809:11: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+  DPRINTF(("%s txn %"Z"u%c %p on mdbenv %p, root page %"Z"u",
+           ^
+mdb.c:2809:22: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+  DPRINTF(("%s txn %"Z"u%c %p on mdbenv %p, root page %"Z"u",
+                      ^
+mdb.c:3194:12: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+   DPRINTF(("committing page %"Z"u", pgno));
+            ^
+mdb.c:3385:11: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+  DPRINTF(("committing txn %"Z"u %p on mdbenv %p, root page %"Z"u",
+           ^
+mdb.c:3385:30: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+  DPRINTF(("committing txn %"Z"u %p on mdbenv %p, root page %"Z"u",
+                              ^
+mdb.c:3491:13: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+    DPRINTF(("page %"Z"u not a meta page", p->mp_pgno));
+             ^
+mdb.c:3601:11: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+  DPRINTF(("writing meta page %d for root page %"Z"u",
+           ^
+mdb.c:4907:11: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+  DPRINTF(("searching %u keys in %s %spage %"Z"u",
+           ^
+mdb.c:5010:12: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+   DPRINTF(("popped page %"Z"u off db %d cursor %p", top->mp_pgno,
+            ^
+mdb.c:5019:11: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+  DPRINTF(("pushing page %"Z"u on db %d cursor %p", mp->mp_pgno,
+           ^
+mdb.c:5082:12: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+   DPRINTF(("page %"Z"u not found", pgno));
+            ^
+mdb.c:5108:12: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+   DPRINTF(("branch page %"Z"u has %u keys", mp->mp_pgno, NUMKEYS(mp)));
+            ^
+mdb.c:5110:12: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+   DPRINTF(("found index 0 to page %"Z"u", NODEPGNO(NODEPTR(mp, 0))));
+            ^
+mdb.c:5155:11: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+  DPRINTF(("found leaf page %"Z"u for key [%s]", mp->mp_pgno,
+           ^
+mdb.c:5256:11: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+  DPRINTF(("db %d root page %"Z"u has flags 0x%X",
+           ^
+mdb.c:5281:11: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+  DPRINTF(("free ov page %"Z"u (%d)", pg, ovpages));
+           ^
+mdb.c:5369:12: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+   DPRINTF(("read overflow page %"Z"u failed", pgno));
+            ^
+mdb.c:5418:11: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+  DPRINTF(("parent page is page %"Z"u, index %u",
+           ^
+mdb.c:5489:11: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+  DPRINTF(("cursor_next: top page is %"Z"u in cursor %p",
+           ^
+mdb.c:5501:12: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+   DPRINTF(("next page is %"Z"u, key index %u", mp->mp_pgno, mc->mc_ki[mc->mc_top]));
+            ^
+mdb.c:5506:11: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+  DPRINTF(("==> cursor points to page %"Z"u with %u keys, key index %u",
+           ^
+mdb.c:5568:11: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+  DPRINTF(("cursor_prev: top page is %"Z"u in cursor %p",
+           ^
+mdb.c:5578:12: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+   DPRINTF(("prev page is %"Z"u, key index %u", mp->mp_pgno, mc->mc_ki[mc->mc_top]));
+            ^
+mdb.c:5584:11: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+  DPRINTF(("==> cursor points to page %"Z"u with %u keys, key index %u",
+           ^
+mdb.c:6155:11: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+  DPRINTF(("==> put db %d key [%s], size %"Z"u, data size %"Z"u",
+           ^
+mdb.c:6155:44: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+  DPRINTF(("==> put db %d key [%s], size %"Z"u, data size %"Z"u",
+                                            ^
+mdb.c:6722:11: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+  DPRINTF(("allocated new mpage %"Z"u, page size %u",
+           ^
+mdb.c:6821:11: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+  DPRINTF(("add to %s %spage %"Z"u index %i, data size %"Z"u key size %"Z"u [%s]",
+           ^
+mdb.c:6821:32: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+  DPRINTF(("add to %s %spage %"Z"u index %i, data size %"Z"u key size %"Z"u [%s]",
+                                ^
+mdb.c:6821:58: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+  DPRINTF(("add to %s %spage %"Z"u index %i, data size %"Z"u key size %"Z"u [%s]",
+                                                          ^
+mdb.c:6855:13: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+    DPRINTF(("data size is %"Z"u, node would be %"Z"u, put data on overflow page",
+             ^
+mdb.c:6855:30: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+    DPRINTF(("data size is %"Z"u, node would be %"Z"u, put data on overflow page",
+                              ^
+mdb.c:6862:13: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+    DPRINTF(("allocated overflow page %"Z"u", ofp->mp_pgno));
+             ^
+mdb.c:6921:11: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+  DPRINTF(("not enough room in page %"Z"u, got %u ptrs",
+           ^
+mdb.c:6923:11: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+  DPRINTF(("upper-lower = %u - %u = %"Z"d", mp->mp_upper,mp->mp_lower,room));
+           ^
+mdb.c:6924:11: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+  DPRINTF(("node size = %"Z"u", node_size));
+           ^
+mdb.c:6944:11: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+  DPRINTF(("delete node %u on %s page %"Z"u", indx,
+           ^
+mdb.c:7107:11: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+  DPRINTF(("Sub-db -%u root page %"Z"u", mx->mx_cursor.mc_dbi,
+           ^
+mdb.c:7413:11: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+  DPRINTF(("moving %s node %u [%s] on page %"Z"u to node %u on page %"Z"u",
+           ^
+mdb.c:7413:46: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+  DPRINTF(("moving %s node %u [%s] on page %"Z"u to node %u on page %"Z"u",
+                                              ^
+mdb.c:7461:13: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+    DPRINTF(("update separator for source page %"Z"u to [%s]",
+             ^
+mdb.c:7489:13: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+    DPRINTF(("update separator for destination page %"Z"u to [%s]",
+             ^
+mdb.c:7532:11: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+  DPRINTF(("merging page %"Z"u into %"Z"u", psrc->mp_pgno, pdst->mp_pgno));
+           ^
+mdb.c:7532:28: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+  DPRINTF(("merging page %"Z"u into %"Z"u", psrc->mp_pgno, pdst->mp_pgno));
+                            ^
+mdb.c:7585:11: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+  DPRINTF(("dst page %"Z"u now has %u keys (%.1f%% filled)",
+           ^
+mdb.c:7684:11: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+  DPRINTF(("rebalancing %s page %"Z"u (has %u keys, %.1f%% full)",
+           ^
+mdb.c:7691:12: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+   DPRINTF(("no need to rebalance page %"Z"u, above fill threshold",
+            ^
+mdb.c:7815:11: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+  DPRINTF(("found neighbor page %"Z"u (%u keys, %.1f%% full)",
+           ^
+mdb.c:8020:11: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+  DPRINTF(("-----> splitting %s page %"Z"u and adding [%s] at index %i/%i",
+           ^
+mdb.c:8027:11: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+  DPRINTF(("new right sibling: page %"Z"u", rp->mp_pgno));
+           ^
+mdb.c:8038:12: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+   DPRINTF(("root split! new root = %"Z"u", pp->mp_pgno));
+            ^
+mdb.c:8056:12: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+   DPRINTF(("parent branch page is %"Z"u", mc->mc_pg[ptop]->mp_pgno));
+            ^
+mdb.c:9459:5: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+     "%10d %"Z"x -\n" : "%10d %"Z"x %"Z"u\n",
+     ^
+mdb.c:9459:24: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+     "%10d %"Z"x -\n" : "%10d %"Z"x %"Z"u\n",
+                        ^
+mdb.c:9459:33: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+     "%10d %"Z"x -\n" : "%10d %"Z"x %"Z"u\n",
+                                 ^
+mdb.c:9548:18: warning: invalid suffix on literal; C++11 requires a space between literal and string macro [-Wliteral-suffix]
+         DPRINTF(("clear stale reader pid %u txn %"Z"d",
+                  ^
+In file included from mdb.c:173:0:
+mdb.c: In function ‘char* mdb_version(int*, int*, int*)’:
+lmdb.h:200:62: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ #define MDB_VERSTR(a,b,c,d) "LMDB " #a "." #b "." #c ": (" d ")"
+                                                              ^
+lmdb.h:203:29: note: in expansion of macro ‘MDB_VERSTR’
+ #define MDB_VERFOO(a,b,c,d) MDB_VERSTR(a,b,c,d)
+                             ^
+lmdb.h:207:2: note: in expansion of macro ‘MDB_VERFOO’
+  MDB_VERFOO(MDB_VERSION_MAJOR,MDB_VERSION_MINOR,MDB_VERSION_PATCH,MDB_VERSION_DATE)
+  ^
+mdb.c:1278:9: note: in expansion of macro ‘MDB_VERSION_STRING’
+  return MDB_VERSION_STRING;
+         ^
+mdb.c: At global scope:
+mdb.c:1303:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+ };
+ ^
+mdb.c:1303:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+mdb.c:1303:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+mdb.c:1303:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+mdb.c:1303:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+mdb.c:1303:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+mdb.c:1303:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+mdb.c:1303:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+mdb.c:1303:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+mdb.c:1303:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+mdb.c:1303:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+mdb.c:1303:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+mdb.c:1303:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+mdb.c:1303:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+mdb.c:1303:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+mdb.c:1303:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+mdb.c:1303:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+mdb.c:1303:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+mdb.c:1303:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+mdb.c:1303:1: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+mdb.c: In function ‘char* mdb_strerror(int)’:
+mdb.c:1318:33: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+   return ("Successful return: 0");
+                                 ^
+mdb.c: In function ‘MDB_page* mdb_page_malloc(MDB_txn*, unsigned int)’:
+mdb.c:1612:19: warning: invalid conversion from ‘void*’ to ‘MDB_page*’ [-fpermissive]
+  if ((ret = malloc(sz)) != NULL) {
+                   ^
+mdb.c: In function ‘void mdb_dlist_free(MDB_txn*)’:
+mdb.c:1657:29: warning: invalid conversion from ‘void*’ to ‘MDB_page*’ [-fpermissive]
+   mdb_dpage_free(env, dl[i].mptr);
+                             ^
+mdb.c:1637:1: note:   initializing argument 2 of ‘void mdb_dpage_free(MDB_env*, MDB_page*)’
+ mdb_dpage_free(MDB_env *env, MDB_page *dp)
+ ^
+mdb.c: In function ‘int mdb_page_spill(MDB_cursor*, MDB_val*, MDB_val*)’:
+mdb.c:1878:14: warning: invalid conversion from ‘void*’ to ‘MDB_page*’ [-fpermissive]
+   dp = dl[i].mptr;
+              ^
+mdb.c: In function ‘int mdb_page_touch(MDB_cursor*)’:
+mdb.c:2321:42: warning: invalid conversion from ‘void*’ to ‘MDB_page*’ [-fpermissive]
+       m2->mc_xcursor->mx_cursor.mc_pg[0] = NODEDATA(leaf);
+                                          ^
+mdb.c: In function ‘int mdb_cursor_shadow(MDB_txn*, MDB_txn*)’:
+mdb.c:2378:16: warning: invalid conversion from ‘void*’ to ‘MDB_cursor*’ [-fpermissive]
+     bk = malloc(size);
+                ^
+mdb.c: In function ‘int mdb_txn_renew0(MDB_txn*)’:
+mdb.c:2522:38: warning: invalid conversion from ‘void*’ to ‘MDB_reader*’ [-fpermissive]
+     pthread_getspecific(env->me_txkey);
+                                      ^
+mdb.c: In function ‘int mdb_txn_begin(MDB_env*, MDB_txn*, unsigned int, MDB_txn**)’:
+mdb.c:2683:19: warning: invalid conversion from ‘void*’ to ‘MDB_txn*’ [-fpermissive]
+  if ((txn = calloc(1, size)) == NULL) {
+                   ^
+mdb.c:2707:32: warning: invalid conversion from ‘void*’ to ‘MDB_ID2L {aka MDB_ID2*}’ [-fpermissive]
+   txn->mt_u.dirty_list = malloc(sizeof(MDB_ID2)*MDB_IDL_UM_SIZE);
+                                ^
+mdb.c: In function ‘void mdb_dbis_update(MDB_txn*, int)’:
+mdb.c:2781:41: warning: invalid conversion from ‘void*’ to ‘char*’ [-fpermissive]
+     char *ptr = env->me_dbxs[i].md_name.mv_data;
+                                         ^
+mdb.c: In function ‘int mdb_page_flush(MDB_txn*, int)’:
+mdb.c:3104:15: warning: invalid conversion from ‘void*’ to ‘MDB_page*’ [-fpermissive]
+    dp = dl[i].mptr;
+               ^
+mdb.c:3119:15: warning: invalid conversion from ‘void*’ to ‘MDB_page*’ [-fpermissive]
+    dp = dl[i].mptr;
+               ^
+mdb.c:3210:14: warning: invalid conversion from ‘void*’ to ‘MDB_page*’ [-fpermissive]
+   dp = dl[i].mptr;
+              ^
+mdb.c: In function ‘int mdb_env_read_header(MDB_env*, MDB_meta*)’:
+mdb.c:3495:5: warning: invalid conversion from ‘void*’ to ‘MDB_meta*’ [-fpermissive]
+   m = METADATA(p);
+     ^
+mdb.c: In function ‘int mdb_env_init_meta(MDB_env*, MDB_meta*)’:
+mdb.c:3559:12: warning: invalid conversion from ‘void*’ to ‘MDB_page*’ [-fpermissive]
+  p = calloc(2, psize);
+            ^
+mdb.c: In function ‘int mdb_env_create(MDB_env**)’:
+mdb.c:3719:12: warning: invalid conversion from ‘void*’ to ‘MDB_env*’ [-fpermissive]
+  e = calloc(1, sizeof(MDB_env));
+            ^
+mdb.c: In function ‘int mdb_env_map(MDB_env*, void*)’:
+mdb.c:3789:20: warning: invalid conversion from ‘void*’ to ‘char*’ [-fpermissive]
+  env->me_map = mmap(addr, env->me_mapsize, prot, MAP_SHARED,
+                    ^
+mdb.c:3817:19: warning: invalid conversion from ‘void*’ to ‘MDB_meta*’ [-fpermissive]
+  env->me_metas[0] = METADATA(p);
+                   ^
+mdb.c: In function ‘void mdb_env_reader_dest(void*)’:
+mdb.c:4054:23: warning: invalid conversion from ‘void*’ to ‘MDB_reader*’ [-fpermissive]
+  MDB_reader *reader = ptr;
+                       ^
+mdb.c: In function ‘int mdb_env_setup_locks(MDB_env*, char*, int, int*)’:
+mdb.c:4390:16: warning: invalid conversion from ‘void*’ to ‘MDB_txninfo*’ [-fpermissive]
+   env->me_txns = m;
+                ^
+mdb.c: In function ‘int mdb_env_open(MDB_env*, const char*, unsigned int, mdb_mode_t)’:
+mdb.c:4545:16: warning: invalid conversion from ‘void*’ to ‘char*’ [-fpermissive]
+  lpath = malloc(rc);
+                ^
+mdb.c:4565:34: warning: invalid conversion from ‘void*’ to ‘MDB_ID2L {aka MDB_ID2*}’ [-fpermissive]
+      (env->me_dirty_list = calloc(MDB_IDL_UM_SIZE, sizeof(MDB_ID2)))))
+                                  ^
+mdb.c:4573:23: warning: invalid conversion from ‘void*’ to ‘MDB_dbx*’ [-fpermissive]
+  env->me_dbxs = calloc(env->me_maxdbs, sizeof(MDB_dbx));
+                       ^
+mdb.c:4574:26: warning: invalid conversion from ‘void*’ to ‘uint16_t* {aka short unsigned int*}’ [-fpermissive]
+  env->me_dbflags = calloc(env->me_maxdbs, sizeof(uint16_t));
+                          ^
+mdb.c:4575:26: warning: invalid conversion from ‘void*’ to ‘unsigned int*’ [-fpermissive]
+  env->me_dbiseqs = calloc(env->me_maxdbs, sizeof(unsigned int));
+                          ^
+mdb.c:4652:16: warning: invalid conversion from ‘void*’ to ‘MDB_txn*’ [-fpermissive]
+    txn = calloc(1, size);
+                ^
+mdb.c: In function ‘int mdb_page_get(MDB_txn*, pgno_t, MDB_page**, int*)’:
+mdb.c:5070:16: warning: invalid conversion from ‘void*’ to ‘MDB_page*’ [-fpermissive]
+      p = dl[x].mptr;
+                ^
+mdb.c: In function ‘int mdb_cursor_put(MDB_cursor*, MDB_val*, MDB_val*, unsigned int)’:
+mdb.c:6246:14: warning: invalid conversion from ‘void*’ to ‘MDB_page*’ [-fpermissive]
+    fp = env->me_pbuf;
+              ^
+mdb.c:6295:12: warning: invalid conversion from ‘void*’ to ‘MDB_page*’ [-fpermissive]
+    mp = fp = xdata.mv_data = env->me_pbuf;
+            ^
+mdb.c:6341:18: warning: invalid conversion from ‘void*’ to ‘MDB_page*’ [-fpermissive]
+     fp = olddata.mv_data;
+                  ^
+mdb.c:6369:1: warning: jump to label ‘prep_subDB’ [-fpermissive]
+ prep_subDB:
+ ^
+mdb.c:6250:9: note:   from here
+    goto prep_subDB;
+         ^
+mdb.c:6294:16: note:   crosses initialization of ‘unsigned int offset’
+    unsigned i, offset = 0;
+                ^
+mdb.c:6261:1: warning: jump to label ‘fix_parent’ [-fpermissive]
+ fix_parent:
+ ^
+mdb.c:6487:10: note:   from here
+     goto fix_parent;
+          ^
+mdb.c:6256:17: note:   skips initialization of ‘unsigned int ksize’
+    unsigned int ksize = mc->mc_db->md_pad;
+                 ^
+mdb.c:6539:18: warning: invalid conversion from ‘const void*’ to ‘void*’ [-fpermissive]
+    xdata.mv_data = "";
+                  ^
+mdb.c: In function ‘int mdb_cursor_del(MDB_cursor*, unsigned int)’:
+mdb.c:6647:40: warning: invalid conversion from ‘void*’ to ‘MDB_page*’ [-fpermissive]
+     mc->mc_xcursor->mx_cursor.mc_pg[0] = NODEDATA(leaf);
+                                        ^
+mdb.c:6663:41: warning: invalid conversion from ‘void*’ to ‘MDB_page*’ [-fpermissive]
+      mc->mc_xcursor->mx_cursor.mc_pg[0] = NODEDATA(leaf);
+                                         ^
+mdb.c:6669:43: warning: invalid conversion from ‘void*’ to ‘MDB_page*’ [-fpermissive]
+        m2->mc_xcursor->mx_cursor.mc_pg[0] = NODEDATA(leaf);
+                                           ^
+mdb.c: In function ‘void mdb_xcursor_init1(MDB_cursor*, MDB_node*)’:
+mdb.c:832:76: warning: invalid conversion from ‘void*’ to ‘MDB_page*’ [-fpermissive]
+ #define NODEDATA(node)  (void *)((char *)(node)->mn_data + (node)->mn_ksize)
+                                                                            ^
+mdb.c:7086:18: note: in expansion of macro ‘NODEDATA’
+   MDB_page *fp = NODEDATA(node);
+                  ^
+mdb.c: In function ‘int mdb_cursor_open(MDB_txn*, MDB_dbi, MDB_cursor**)’:
+mdb.c:7163:18: warning: invalid conversion from ‘void*’ to ‘MDB_cursor*’ [-fpermissive]
+  if ((mc = malloc(size)) != NULL) {
+                  ^
+mdb.c: In function ‘void* mdb_env_copythr(void*)’:
+mdb.c:8433:17: warning: invalid conversion from ‘void*’ to ‘mdb_copy*’ [-fpermissive]
+  mdb_copy *my = arg;
+                 ^
+mdb.c: In function ‘int mdb_env_cwalk(mdb_copy*, pgno_t*, int)’:
+mdb.c:8541:20: warning: invalid conversion from ‘void*’ to ‘char*’ [-fpermissive]
+  buf = ptr = malloc(my->mc_env->me_psize * mc.mc_snum);
+                    ^
+mdb.c: In function ‘int mdb_env_copy2(MDB_env*, const char*, unsigned int)’:
+mdb.c:8910:17: warning: invalid conversion from ‘void*’ to ‘char*’ [-fpermissive]
+   lpath = malloc(len);
+                 ^
+mdb.c: In function ‘int mdb_dbi_open(MDB_txn*, const char*, unsigned int, MDB_dbi*)’:
+mdb.c:9157:43: warning: invalid conversion from ‘void*’ to ‘const char*’ [-fpermissive]
+    !strncmp(name, txn->mt_dbxs[i].md_name.mv_data, len)) {
+                                           ^
+In file included from mdb.c:97:0:
+/usr/include/string.h:143:12: note:   initializing argument 2 of ‘int strncmp(const char*, const char*, size_t)’
+ extern int strncmp (const char *__s1, const char *__s2, size_t __n)
+            ^
+mdb.c: In function ‘void mdb_dbi_close(MDB_env*, MDB_dbi)’:
+mdb.c:9240:34: warning: invalid conversion from ‘void*’ to ‘char*’ [-fpermissive]
+  ptr = env->me_dbxs[dbi].md_name.mv_data;
+                                  ^
+mdb.c: In function ‘int mdb_reader_check(MDB_env*, int*)’:
+mdb.c:9533:15: warning: invalid conversion from ‘void*’ to ‘pid_t* {aka int*}’ [-fpermissive]
+  pids = malloc((rdrs+1) * sizeof(MDB_PID_T));
+               ^
+COLLECT_GCC_OPTIONS='-v' '-fpermissive' '-std=c++11' '-g' '-o' 'lmdb_benchmark.exe' '-I' '.' '-L/usr/lib/x86_64-linux-gnu' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ as -v -I . --64 -o /tmp/cc4Sl5WT.o /tmp/ccOFHf5Q.s
+GNU assembler version 2.26.1 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.26.1
+COLLECT_GCC_OPTIONS='-v' '-fpermissive' '-std=c++11' '-g' '-o' 'lmdb_benchmark.exe' '-I' '.' '-L/usr/lib/x86_64-linux-gnu' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/5/cc1plus -quiet -v -I . -imultiarch x86_64-linux-gnu -D_GNU_SOURCE random.h -quiet -dumpbase random.h -mtune=generic -march=x86-64 -auxbase random -g -std=c++11 -version -fpermissive -fstack-protector-strong -Wformat -Wformat-security -o /tmp/ccOFHf5Q.s --output-pch= lmdb_benchmark.exe
+GNU C++11 (Ubuntu 5.4.0-6ubuntu1~16.04.10) version 5.4.0 20160609 (x86_64-linux-gnu)
+	compiled by GNU C version 5.4.0 20160609, GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring duplicate directory "/usr/include/x86_64-linux-gnu/c++/5"
+ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"
+ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/5/../../../../x86_64-linux-gnu/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ .
+ /usr/include/c++/5
+ /usr/include/x86_64-linux-gnu/c++/5
+ /usr/include/c++/5/backward
+ /usr/lib/gcc/x86_64-linux-gnu/5/include
+ /usr/local/include
+ /usr/lib/gcc/x86_64-linux-gnu/5/include-fixed
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+GNU C++11 (Ubuntu 5.4.0-6ubuntu1~16.04.10) version 5.4.0 20160609 (x86_64-linux-gnu)
+	compiled by GNU C version 5.4.0 20160609, GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: 61363a0467975df68838dbafa37c997a
+COLLECT_GCC_OPTIONS='-v' '-fpermissive' '-std=c++11' '-g' '-o' 'lmdb_benchmark.exe' '-I' '.' '-L/usr/lib/x86_64-linux-gnu' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/5/cc1plus -quiet -v -I . -imultiarch x86_64-linux-gnu -D_GNU_SOURCE main.cpp -quiet -dumpbase main.cpp -mtune=generic -march=x86-64 -auxbase main -g -std=c++11 -version -fpermissive -fstack-protector-strong -Wformat -Wformat-security -o /tmp/ccOFHf5Q.s
+GNU C++11 (Ubuntu 5.4.0-6ubuntu1~16.04.10) version 5.4.0 20160609 (x86_64-linux-gnu)
+	compiled by GNU C version 5.4.0 20160609, GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+ignoring duplicate directory "/usr/include/x86_64-linux-gnu/c++/5"
+ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"
+ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/5/../../../../x86_64-linux-gnu/include"
+#include "..." search starts here:
+#include <...> search starts here:
+ .
+ /usr/include/c++/5
+ /usr/include/x86_64-linux-gnu/c++/5
+ /usr/include/c++/5/backward
+ /usr/lib/gcc/x86_64-linux-gnu/5/include
+ /usr/local/include
+ /usr/lib/gcc/x86_64-linux-gnu/5/include-fixed
+ /usr/include/x86_64-linux-gnu
+ /usr/include
+End of search list.
+GNU C++11 (Ubuntu 5.4.0-6ubuntu1~16.04.10) version 5.4.0 20160609 (x86_64-linux-gnu)
+	compiled by GNU C version 5.4.0 20160609, GMP version 6.1.0, MPFR version 3.1.4, MPC version 1.0.3
+GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+Compiler executable checksum: 61363a0467975df68838dbafa37c997a
+main.cpp:120:3: error: ‘Slice’ does not name a type
+   Slice Generate(int len) {
+   ^
+main.cpp: In constructor ‘leveldb::{anonymous}::RandomGenerator::RandomGenerator()’:
+main.cpp:114:7: error: ‘test’ has not been declared
+       test::CompressibleString(&rnd, FLAGS_compression_ratio, 100, &piece);
+       ^
+main.cpp: At global scope:
+main.cpp:130:8: error: ‘Slice’ does not name a type
+ static Slice TrimSpace(Slice s) {
+        ^
+main.cpp:155:3: error: ‘Histogram’ does not name a type
+   Histogram hist_;
+   ^
+main.cpp:263:19: error: ‘Slice’ does not name a type
+   void Stop(const Slice& name) {
+                   ^
+main.cpp: In member function ‘void leveldb::Benchmark::PrintEnvironment()’:
+main.cpp:207:43: error: ‘strchr’ was not declared in this scope
+         const char* sep = strchr(line, ':');
+                                           ^
+main.cpp:211:9: error: ‘Slice’ was not declared in this scope
+         Slice key = TrimSpace(Slice(line, sep - 1 - line));
+         ^
+main.cpp:212:15: error: expected ‘;’ before ‘val’
+         Slice val = TrimSpace(Slice(sep + 1));
+               ^
+main.cpp:213:13: error: ‘key’ was not declared in this scope
+         if (key == "model name") {
+             ^
+main.cpp:215:22: error: ‘val’ was not declared in this scope
+           cpu_type = val.ToString();
+                      ^
+main.cpp:217:24: error: ‘val’ was not declared in this scope
+           cache_size = val.ToString();
+                        ^
+main.cpp: In member function ‘void leveldb::Benchmark::Start()’:
+main.cpp:228:14: error: ‘Env’ has not been declared
+     start_ = Env::Default()->NowMicros() * 1e-6;
+              ^
+main.cpp:232:5: error: ‘hist_’ was not declared in this scope
+     hist_.Clear();
+     ^
+main.cpp: In member function ‘void leveldb::Benchmark::FinishedSingleOp()’:
+main.cpp:239:20: error: ‘Env’ has not been declared
+       double now = Env::Default()->NowMicros() * 1e-6;
+                    ^
+main.cpp:241:7: error: ‘hist_’ was not declared in this scope
+       hist_.Add(micros);
+       ^
+main.cpp: In member function ‘void leveldb::Benchmark::Stop(const int&)’:
+main.cpp:264:21: error: ‘Env’ has not been declared
+     double finish = Env::Default()->NowMicros() * 1e-6;
+                     ^
+main.cpp:282:18: error: request for member ‘ToString’ in ‘name’, which is of non-class type ‘const int’
+             name.ToString().c_str(),
+                  ^
+main.cpp:287:53: error: ‘hist_’ was not declared in this scope
+       fprintf(stdout, "Microseconds per op:\n%s\n", hist_.ToString().c_str());
+                                                     ^
+main.cpp: In constructor ‘leveldb::Benchmark::Benchmark()’:
+main.cpp:314:5: error: ‘vector’ is not a member of ‘std’
+     std::vector<std::string> files;
+     ^
+main.cpp:314:28: error: expected primary-expression before ‘>’ token
+     std::vector<std::string> files;
+                            ^
+main.cpp:314:30: error: ‘files’ was not declared in this scope
+     std::vector<std::string> files;
+                              ^
+main.cpp:316:5: error: ‘Env’ has not been declared
+     Env::Default()->GetTestDirectory(&test_dir);
+     ^
+main.cpp:317:5: error: ‘Env’ has not been declared
+     Env::Default()->GetChildren(test_dir.c_str(), &files);
+     ^
+main.cpp:320:27: error: ‘Slice’ was not declared in this scope
+         if (Slice(files[i]).starts_with("dbbench_mdb")) {
+                           ^
+main.cpp:324:11: error: ‘Env’ has not been declared
+           Env::Default()->DeleteFile(file_name.c_str());
+           ^
+main.cpp: In member function ‘void leveldb::Benchmark::Run()’:
+main.cpp:339:47: error: ‘strchr’ was not declared in this scope
+       const char* sep = strchr(benchmarks, ',');
+                                               ^
+main.cpp:340:7: error: ‘Slice’ was not declared in this scope
+       Slice name;
+       ^
+main.cpp:342:9: error: ‘name’ was not declared in this scope
+         name = benchmarks;
+         ^
+main.cpp:345:9: error: ‘name’ was not declared in this scope
+         name = Slice(benchmarks, sep - benchmarks);
+         ^
+main.cpp:354:11: error: ‘name’ was not declared in this scope
+       if (name == Slice("fillseq")) {
+           ^
+main.cpp:425:14: error: ‘name’ was not declared in this scope
+         Stop(name);
+              ^
+main.cpp:429:4: error: ‘Env’ has not been declared
+    Env::Default()->GetTestDirectory(&test_dir);
+    ^
+main.cpp: In member function ‘void leveldb::Benchmark::Open(leveldb::Benchmark::DBFlags)’:
+main.cpp:439:23: error: ‘assert’ was not declared in this scope
+     assert(db_ == NULL);
+                       ^
+main.cpp:446:5: error: ‘Env’ has not been declared
+     Env::Default()->GetTestDirectory(&test_dir);
+     ^
+main.cpp: In member function ‘void leveldb::Benchmark::Write(leveldb::Benchmark::DBFlags, leveldb::Benchmark::Order, leveldb::Benchmark::DBState, int, int, int)’:
+main.cpp:535:32: error: ‘class leveldb::{anonymous}::RandomGenerator’ has no member named ‘Generate’
+    mval.mv_data = (void *)gen_.Generate(value_size).data();
+                                ^
+main.cpp: In function ‘int main(int, char**)’:
+main.cpp:605:9: error: ‘Slice’ is not a member of ‘leveldb’
+     if (leveldb::Slice(argv[i]).starts_with("--benchmarks=")) {
+         ^
+main.cpp:606:58: error: ‘strlen’ was not declared in this scope
+       FLAGS_benchmarks = argv[i] + strlen("--benchmarks=");
+                                                          ^
+main.cpp:626:43: error: ‘strncmp’ was not declared in this scope
+     } else if (strncmp(argv[i], "--db=", 5) == 0) {
+                                           ^
+main.cpp:636:16: error: ‘leveldb::Env’ has not been declared
+       leveldb::Env::Default()->GetTestDirectory(&default_db_path);
+                ^
